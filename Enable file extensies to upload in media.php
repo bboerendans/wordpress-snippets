@@ -1,5 +1,13 @@
 <?php
 
+/*
+
+   Enable extra file extensions to upload in media
+   
+   functions.php
+
+*/
+
 function custom_wp_check_filetype_and_ext($filetype_and_ext, $file, $filename) {
    if(!$filetype_and_ext['ext'] || !$filetype_and_ext['type'] || !$filetype_and_ext['proper_filename']) {
         $extension = pathinfo($filename)['extension'];
