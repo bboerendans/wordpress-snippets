@@ -1,3 +1,5 @@
+<?php
+
 function custom_wp_check_filetype_and_ext($filetype_and_ext, $file, $filename) {
    if(!$filetype_and_ext['ext'] || !$filetype_and_ext['type'] || !$filetype_and_ext['proper_filename']) {
         $extension = pathinfo($filename)['extension'];
@@ -18,3 +20,5 @@ function custom_wp_check_filetype_and_ext($filetype_and_ext, $file, $filename) {
     return $filetype_and_ext;
 }
 add_filter('wp_check_filetype_and_ext', 'custom_wp_check_filetype_and_ext', 5, 5);
+
+?>
